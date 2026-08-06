@@ -1,5 +1,0 @@
-LTO_ENABLE = no
-QMK_SETTINGS = yes
-VIA_ENABLE = yes
-VIAL_ENABLE = yes
-MIDI_ENABLE = yes
