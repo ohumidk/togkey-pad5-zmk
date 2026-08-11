@@ -107,7 +107,7 @@
             <&macro_press &rgb_ug RGB_TOG>, 
             <&macro_wait_time 100>, 
             <&macro_press &rgb_ug RGB_TOG>, 
-             <&macro_wait_time 100>, 
+            <&macro_wait_time 100>, 
             <&macro_press &rgb_ug RGB_TOG>, 
             <&macro_wait_time 100>, 
             <&macro_press &rgb_ug RGB_TOG>, 
