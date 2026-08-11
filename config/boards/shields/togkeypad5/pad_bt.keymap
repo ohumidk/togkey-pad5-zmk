@@ -10,106 +10,144 @@
         go_to_bluetooth_layer: go_to_bluetooth_layer {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&macro_press &to 1>, <&macro_press &rgb_ug RGB_ON>, <&macro_press &rgb_ug RGB_COLOR_HSB(225, 100, 50)>, <&macro_press &rgb_ug RGB_EFF>; 
+            bindings = <&macro_press &to 1>, 
+            <&macro_press &rgb_ug RGB_ON>, 
+            <&macro_press &rgb_ug RGB_COLOR_HSB(225, 100, 50)>, 
+            <&macro_press &rgb_ug RGB_EFF>;
         };
 
-        go_to_default_layer: go_to_default_layer {
+        go_to_default_from_bluetooth_layer: go_to_default_from_bluetooth_layer {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&macro_press &to 0>, <&macro_press &rgb_ug RGB_EFR>, <&macro_press &rgb_ug RGB_COLOR_HSB(205, 0, 25)>; 
+            bindings = <&macro_press &to 0>, 
+            <&macro_press &rgb_ug RGB_EFR>, 
+            <&macro_press &rgb_ug RGB_COLOR_HSB(128, 100, 50)>;
+        };
+
+        go_to_fun_layer: go_to_fun_layer {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_press &to 2>, 
+            <&macro_press &rgb_ug RGB_ON>, 
+            <&macro_press &rgb_ug RGB_COLOR_HSB(270, 100, 50)>;
+        };
+
+        go_to_default_from_fun_layer: go_to_default_from_fun_layer {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_press &to 0>, 
+            <&macro_press &rgb_ug RGB_COLOR_HSB(128, 100, 50)>;
+        };
+
+        go_to_rain_layer: go_to_rain_layer {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_press &to 3>, 
+            <&macro_press &rgb_ug RGB_ON>, 
+            <&macro_press &rgb_ug RGB_COLOR_HSB(128, 100, 50)>, 
+            <&macro_press &rgb_ug RGB_EFF>, 
+            <&macro_press &rgb_ug RGB_EFF>;
+        };
+
+        go_to_default_from_rain_layer: go_to_default_from_rain_layer {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_press &to 0>, 
+            <&macro_press &rgb_ug RGB_EFR>, 
+            <&macro_press &rgb_ug RGB_EFR>, 
+            <&macro_press &rgb_ug RGB_COLOR_HSB(128, 100, 50)>;
         };
 
         bluetooth_profile_clear: bluetooth_profile_clear {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&macro_press &bt BT_CLR>
-            , <&macro_press &rgb_ug RGB_TOG>
-            , <&macro_wait_time 100>
-            , <&macro_press &rgb_ug RGB_TOG>
-            ,  <&macro_wait_time 100>
-            , <&macro_press &rgb_ug RGB_TOG>
-            , <&macro_wait_time 100>
-            , <&macro_press &rgb_ug RGB_TOG>
-            , <&macro_wait_time 100>
-            , <&macro_press &rgb_ug RGB_TOG>
-            , <&macro_wait_time 100>
-            , <&macro_press &rgb_ug RGB_TOG>
-            , <&macro_wait_time 100>
-            , <&macro_press &rgb_ug RGB_TOG>
-            , <&macro_wait_time 100>
-            , <&macro_press &rgb_ug RGB_TOG>
-            , <&macro_wait_time 100>
-            , <&macro_press &rgb_ug RGB_TOG>
-            , <&macro_wait_time 100>
-            , <&macro_press &rgb_ug RGB_TOG>; 
+            bindings = <&macro_press &bt BT_CLR>, 
+            <&macro_wait_time 100>, 
+            <&macro_press &rgb_ug RGB_TOG>, 
+            <&macro_wait_time 100>, 
+            <&macro_press &rgb_ug RGB_TOG>, 
+            <&macro_wait_time 100>, 
+            <&macro_press &rgb_ug RGB_TOG>, 
+            <&macro_wait_time 100>, 
+            <&macro_press &rgb_ug RGB_TOG>, 
+            <&macro_wait_time 100>, 
+            <&macro_press &rgb_ug RGB_TOG>, 
+            <&macro_wait_time 100>, 
+            <&macro_press &rgb_ug RGB_TOG>, 
+            <&macro_wait_time 100>, 
+            <&macro_press &rgb_ug RGB_TOG>, 
+            <&macro_wait_time 100>, 
+            <&macro_press &rgb_ug RGB_TOG>, 
+            <&macro_wait_time 100>, 
+            <&macro_press &rgb_ug RGB_TOG>; 
         };
 
         bluetooth_profile_select_0: bluetooth_profile_select_0 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&macro_press &bt BT_SEL 0>
-            , <&macro_press &rgb_ug RGB_TOG>
-            , <&macro_wait_time 100>
-            , <&macro_press &rgb_ug RGB_TOG>
-            , <&macro_wait_time 100>
-            , <&macro_press &rgb_ug RGB_TOG>
-            , <&macro_wait_time 100>
-            , <&macro_press &rgb_ug RGB_TOG>
-            , <&macro_wait_time 100>
-            , <&macro_press &rgb_ug RGB_TOG>
-            , <&macro_wait_time 100>
-            , <&macro_press &rgb_ug RGB_TOG>; 
+            bindings = <&macro_press &bt BT_SEL 0>, 
+            <&macro_press &rgb_ug RGB_TOG>, 
+            <&macro_wait_time 100>, 
+            <&macro_press &rgb_ug RGB_TOG>, 
+            <&macro_wait_time 100>, 
+            <&macro_press &rgb_ug RGB_TOG>, 
+            <&macro_wait_time 100>, 
+            <&macro_press &rgb_ug RGB_TOG>, 
+            <&macro_wait_time 100>, 
+            <&macro_press &rgb_ug RGB_TOG>, 
+            <&macro_wait_time 100>, 
+            <&macro_press &rgb_ug RGB_TOG>; 
         };
 
         bluetooth_profile_select_1: bluetooth_profile_select_1 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&macro_press &bt BT_SEL 1>
-            , <&macro_press &rgb_ug RGB_TOG>
-            , <&macro_wait_time 100>
-            , <&macro_press &rgb_ug RGB_TOG>
-            , <&macro_wait_time 100>
-            , <&macro_press &rgb_ug RGB_TOG>
-            , <&macro_wait_time 100>
-            , <&macro_press &rgb_ug RGB_TOG>
-            , <&macro_wait_time 100>
-            , <&macro_press &rgb_ug RGB_TOG>
-            , <&macro_wait_time 100>
-            , <&macro_press &rgb_ug RGB_TOG>; 
+            bindings = <&macro_press &bt BT_SEL 1>, 
+            <&macro_press &rgb_ug RGB_TOG>, 
+            <&macro_wait_time 100>, 
+            <&macro_press &rgb_ug RGB_TOG>, 
+            <&macro_wait_time 100>, 
+            <&macro_press &rgb_ug RGB_TOG>, 
+            <&macro_wait_time 100>, 
+            <&macro_press &rgb_ug RGB_TOG>, 
+            <&macro_wait_time 100>, 
+            <&macro_press &rgb_ug RGB_TOG>, 
+            <&macro_wait_time 100>, 
+            <&macro_press &rgb_ug RGB_TOG>; 
         };
 
         bluetooth_profile_select_2: bluetooth_profile_select_2 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&macro_press &bt BT_SEL 2>
-            , <&macro_press &rgb_ug RGB_TOG>
-            , <&macro_wait_time 100>
-            , <&macro_press &rgb_ug RGB_TOG>
-            , <&macro_wait_time 100>
-            , <&macro_press &rgb_ug RGB_TOG>
-            , <&macro_wait_time 100>
-            , <&macro_press &rgb_ug RGB_TOG>
-            , <&macro_wait_time 100>
-            , <&macro_press &rgb_ug RGB_TOG>
-            , <&macro_wait_time 100>
-            , <&macro_press &rgb_ug RGB_TOG>; 
+            bindings = <&macro_press &bt BT_SEL 2>, 
+            <&macro_press &rgb_ug RGB_TOG>, 
+            <&macro_wait_time 100>, 
+            <&macro_press &rgb_ug RGB_TOG>, 
+            <&macro_wait_time 100>, 
+            <&macro_press &rgb_ug RGB_TOG>, 
+            <&macro_wait_time 100>, 
+            <&macro_press &rgb_ug RGB_TOG>, 
+            <&macro_wait_time 100>, 
+            <&macro_press &rgb_ug RGB_TOG>, 
+            <&macro_wait_time 100>, 
+            <&macro_press &rgb_ug RGB_TOG>; 
         };
 
         bluetooth_profile_select_3: bluetooth_profile_select_3 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&macro_press &bt BT_SEL 3>
-            , <&macro_press &rgb_ug RGB_TOG>
-            , <&macro_wait_time 100>
-            , <&macro_press &rgb_ug RGB_TOG>
-            ,  <&macro_wait_time 100>
-            , <&macro_press &rgb_ug RGB_TOG>
-            , <&macro_wait_time 100>
-            , <&macro_press &rgb_ug RGB_TOG>
-            , <&macro_wait_time 100>
-            , <&macro_press &rgb_ug RGB_TOG>
-            , <&macro_wait_time 100>
-            , <&macro_press &rgb_ug RGB_TOG>; 
+            bindings = <&macro_press &bt BT_SEL 3>, 
+            <&macro_press &rgb_ug RGB_TOG>, 
+            <&macro_wait_time 100>, 
+            <&macro_press &rgb_ug RGB_TOG>, 
+            <&macro_wait_time 100>, 
+            <&macro_press &rgb_ug RGB_TOG>, 
+            <&macro_wait_time 100>, 
+            <&macro_press &rgb_ug RGB_TOG>, 
+            <&macro_wait_time 100>, 
+            <&macro_press &rgb_ug RGB_TOG>, 
+            <&macro_wait_time 100>, 
+            <&macro_press &rgb_ug RGB_TOG>; 
         };
     };
 
@@ -132,35 +170,35 @@
             timeout-ms = <50>;
             key-positions = <2 3 4>;
             layers = <1>;
-            bindings = <&go_to_default_layer>;
+            bindings = <&go_to_default_from_bluetooth_layer>;
         };
 
         combo_lighting {
             timeout-ms = <50>;
             key-positions = <0 2>;
             layers = <0>;
-            bindings = <&to 2>;
+            bindings = <&go_to_fun_layer>;
         };
 
         combo_exit_lighting {
             timeout-ms = <50>;
             key-positions = <0 2>;
             layers = <2>;
-            bindings = <&to 0>;
+            bindings = <&go_to_default_from_fun_layer>;
         };
 
         combo_layer_2 {
             timeout-ms = <50>;
             key-positions = <1 3>;
             layers = <0>;
-            bindings = <&to 3>;
+            bindings = <&go_to_rain_layer>;
         };
 
         combo_exit_layer_2 {
             timeout-ms = <50>;
             key-positions = <1 3>;
             layers = <3>;
-            bindings = <&to 0>;
+            bindings = <&go_to_default_from_rain_layer>;
         };
     };
 
@@ -196,7 +234,7 @@
         };
 
         user_layer_1 { // Layer 2
-            display-name = "LAY1";
+            display-name = "FUN";
             // -------------------------------------
             //       |     RGB TOG     |     Brightness Up     |
             // |     None     |     Brightness Down    |     Hue     |
@@ -210,7 +248,7 @@
         };
 
         user_layer_2 { // Layer 3
-            display-name = "LAY2";
+            display-name = "RAIN";
             // -------------------------------------
             //       |     RGB TOG     |     Brightness Up     |
             // |     None     |     Brightness Down    |     Hue     |
@@ -224,4 +262,3 @@
         };
     };
  };
- 
