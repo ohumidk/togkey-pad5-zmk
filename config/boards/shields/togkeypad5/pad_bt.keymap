@@ -7,35 +7,6 @@
 
 / {
      macros {
-        go_to_layer_3: go_to_layer_3 {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&macro_press &to 3>, <&macro_press &rgb_ug RGB_ON>, <&macro_press &rgb_ug RGB_COLOR_HSB(0, 100, 50)>;
-        };
-
-        go_to_layer_2: go_to_layer_2 {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&macro_press &to 2>, <&macro_press &rgb_ug RGB_ON>, <&macro_press &rgb_ug RGB_COLOR_HSB(270, 100, 50)>;
-        };
-
-        go_to_bluetooth_layer: go_to_bluetooth_layer {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&macro_press &to 1>, 
-            <&macro_press &rgb_ug RGB_ON>, 
-            <&macro_press &rgb_ug RGB_COLOR_HSB(225, 100, 50)>, 
-            <&macro_press &rgb_ug RGB_EFF>;
-        };
-
-        go_to_default_from_bluetooth_layer: go_to_default_from_bluetooth_layer {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&macro_press &to 0>, 
-            <&macro_press &rgb_ug RGB_EFR>, 
-            <&macro_press &rgb_ug RGB_COLOR_HSB(128, 100, 50)>;
-        };
-
         go_to_fun_layer: go_to_fun_layer {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -66,6 +37,23 @@
             #binding-cells = <0>;
             bindings = <&macro_press &to 0>, 
             <&macro_press &rgb_ug RGB_EFR>, 
+            <&macro_press &rgb_ug RGB_EFR>, 
+            <&macro_press &rgb_ug RGB_COLOR_HSB(128, 100, 50)>;
+        };
+
+        go_to_bluetooth_layer: go_to_bluetooth_layer {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_press &to 1>, 
+            <&macro_press &rgb_ug RGB_ON>, 
+            <&macro_press &rgb_ug RGB_COLOR_HSB(225, 100, 50)>, 
+            <&macro_press &rgb_ug RGB_EFF>;
+        };
+
+        go_to_default_from_bluetooth_layer: go_to_default_from_bluetooth_layer {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_press &to 0>, 
             <&macro_press &rgb_ug RGB_EFR>, 
             <&macro_press &rgb_ug RGB_COLOR_HSB(128, 100, 50)>;
         };
