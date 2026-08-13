@@ -222,21 +222,21 @@
         };
 
         user_layer_1 { // Layer 2
-            display-name = "LAY1";
+            display-name = "FUN";
             // -------------------------------------
             //       |     RGB TOG     |     Brightness Up     |
             // |     None     |     Brightness Down    |     Hue     |
             bindings = <
-                &none
-                &none
-                &none
-                &none
-                &none
+                &kp F13
+                &kp F14
+                &kp F15
+                &kp F16
+                &kp F17
             >;
         };
 
         user_layer_2 { // Layer 3
-            display-name = "LAY2";
+            display-name = "KIDS";
             // -------------------------------------
             //       |     RGB TOG     |     Brightness Up     |
             // |     None     |     Brightness Down    |     Hue     |
