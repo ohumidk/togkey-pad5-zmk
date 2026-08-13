@@ -34,14 +34,14 @@
         go_to_layer_fun: go_to_layer_fun {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&macro_press &to 0>,
+            bindings = <&macro_press &to 2>,
             <&macro_press &rgb_ug RGB_COLOR_HSB(277, 100, 100)>; 
         };
 
         go_to_layer_kid: go_to_layer_kid {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&macro_press &to 0>,
+            bindings = <&macro_press &to 3>,
             <&macro_press &rgb_ug RGB_COLOR_HSB(1, 88, 80)>; 
         };
         
